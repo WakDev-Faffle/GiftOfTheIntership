@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link href="./Index_files/FontFamily.css" rel="stylesheet" type="text/css">
+        <link href="https://wakdev-faffle.github.io/Web-gallery/FontFamily.css" rel="stylesheet" type="text/css">
         <style>
             body {
                 background: #5a1e12;
@@ -87,29 +87,6 @@
                 ],
             ],
             animate: function (seqAnimationElement,stage,opt) {
-                /*if (opt.animationType=='chained') {
-                    function a() {
-                        sAE_info = seqAnimationElement.map((e,i)=>{
-                            AnimationScriptedV0_1.set(e,AnimationList[0][stage][i].kfe,AnimationList[0][stage][i].opt);
-                        });
-                        console.log(opt);
-                        AllFinished = sAE_info.map(animationInfo => animationInfo.finished);
-                        AllFinished.forEach(e => {
-                            e.then(() => {
-                                if (stage < AnimationList[0].length - 1) {
-                                    stage++;
-                                    a();
-                                };
-                            });
-                        });
-                    };
-                    a();
-                }
-                else {
-                    seqAnimationElement.forEach((e,i)=>{
-                        AnimationScriptedV0_1.set(e,AnimationList[0][stage][i].kfe,AnimationList[0][stage][i].opt);
-                    });
-                }*/
                 seqAnimationElement.filter((e,i)=>AnimationList[0][stage][i]!=undefined).forEach((e,i)=>{
                     if (Object.keys(AnimationList[0][stage][i]).every(e=>['kfe','opt'].includes(e))) {
                         AnimationScriptedV0_1.set(e,AnimationList[0][stage][i].kfe,AnimationList[0][stage][i].opt);
