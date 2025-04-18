@@ -4,7 +4,21 @@
         <meta content="width=device-width, height=device-height, initial-scale=1, charset=utf-8">
         <link href="https://wakdev-faffle.github.io/Web-gallery/FontFamily.css" rel="stylesheet" type="text/css">
         <script>
-            console.log(window.outerHeight);
+            StyleModifyer = {
+                set: {
+                    styleSheet: function setStyleRule(targetBalise,selector,property,value) {
+                        if ([targetBalise,selector,property,value].every(e=>typeof e == 'string')) {
+                            /*var styleElement = document.querySelector(`style${targetBalise}`),
+                                txt = styleElement.textContent,
+                                regex = [new Regex(`[\w|\W|]+(?=${selector})`),new Regex('(?<=})[\w|\W]+')],
+                                styleSheet = txt.replace(regex[0],'').replace(regex[1],''),
+                                o = txt.replace(/[\w|\W|]+(?=body)/,'').replace(/(?<=})[\w|\W]+/,'').replace(/[\n|\s+]/g,'').split(/{|}/);
+                            o.pop();
+                            Object.create()*/
+                        }
+                    }
+                }
+            }
         </script>
         <style>
             body {
