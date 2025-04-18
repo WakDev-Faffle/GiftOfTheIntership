@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
+	<head>
         <meta content="width=device-width, initial-scale=1, charset=utf-8">
         <link href="https://wakdev-faffle.github.io/Web-gallery/FontFamily.css" rel="stylesheet" type="text/css">
         <script>
@@ -8,13 +8,13 @@
                 set: {
                     styleSheet: function setStyleRule(targetBalise,selector,property,value) {
                         if ([targetBalise,selector,property,value].every(e=>typeof e == 'string')) {
-                            /*var styleElement = document.querySelector(`style${targetBalise}`),
+                            var styleElement = document.querySelector(`style${targetBalise}`),
                                 txt = styleElement.textContent,
                                 regex = [new Regex(`[\w|\W|]+(?=${selector})`),new Regex('(?<=})[\w|\W]+')],
                                 styleSheet = txt.replace(regex[0],'').replace(regex[1],''),
                                 o = txt.replace(/[\w|\W|]+(?=body)/,'').replace(/(?<=})[\w|\W]+/,'').replace(/[\n|\s+]/g,'').split(/{|}/);
                             o.pop();
-                            Object.create()*/
+                            //Object.create(function StylesheetInterpreted() {},);
                         }
                     }
                 }
@@ -50,67 +50,67 @@
             }
         </style>
     </head>
-  <body>
-    
-    <div class="content">
-        <section class="cover">
-            <div class="logo">
-                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="1616px" height="622px">
-                    <path pathLength="100" style="d: path(&#39;M20,521 l82,0 a1,1,1,1,0,0,-348 l-27,0 l0,213 M482,173 l-124,0 l0,349 l211,0 M280,343 l149,0 M569,520 l0,-431 M339,89 l500,0 M1058,266 l0,149 a1,1,1,0,0,211,0 l0,-242 l130,0 a1,1,1,0,1,0,209 l-34,0 l0,139 m0,-139 c155,0,127,139,230,139 M814,178 a1,1,1,0,0,0,340 a1,1,1,0,0,0,-340z&#39;);fill: transparent;stroke: var(--letterColor);stroke-width: 41px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
-                    <path pathLength="100" style="d: path(&#39;M338,80 c120,0,128,-62,114,-71,-9,-4,-25,10,-3,15 M694,142 M582,257 c22,-127,106,-143,115,-143,50,0,23,68,-3,28 M854,93 c0,0,139,9,200,160&#39;);fill: transparent;stroke: var(--letterColor);stroke-width: 17px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
-                    <path pathLength="100" style="d: path(&#39;M814,200 a1,1,1,0,0,0,294 a1,1,1,0,0,0,-294&#39;);stroke: var(--letterColor);fill: transparent;stroke-linecap: round;stroke-dasharray: 0 2 0 2;stroke-width: 8px;"></path>
-                    <path pathLength="100" style="d: path(&#39;M815,328 a1,1,1,0,0,0,37 a1,1,1,0,0,0,-37 M815,347 l25,-67 m-25,67 l56,90 M159,612 l1290,0&#39;);stroke: var(--letterColor);fill: transparent;stroke-width: 19px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
-                    <path pathLength="100" style="d: path(&#39;M817,12 c0,0,0,22,16,51 l0,10 l-38,0 l0,-10 c0,0,8,-13,16,-51 27,14,-60,21,0,21 l6,0 c49,0,-6,0,0,-21 M814,111 l0,34 a1,1,1,0,0,0,18 a1,1,1,0,0,0,-18&#39;);stroke: var(--letterColor);fill: var(--letterColor);stroke-width: 17px;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
-                </svg>
-            </div>
-            <div class="slogan"><p>Un p'tit <span>Détour</span> ?</p></div>
-        </section>
-    </div>
-    <script>
-        let SeqAnimationList = [];
-        Object.values(document.querySelector('svg.logo').children).forEach(e => {SeqAnimationList.push(e);});
-        SeqAnimationList.push(document.querySelector('.slogan'));
-        let AnimationScriptedV0_1 = {
-            1: function AnimationScriptedV0_1() {},
-            set: function (element,k,opt) {
-                if (!([element,k,opt].includes(undefined)||[element,k,opt].includes(null))) {
-                    kfe = new KeyframeEffect(element,k,opt);
-                    animationPlayed = new Animation(kfe,document.timeline);
-                    if (opt.hasOwnProperty('id')&&typeof opt.id == 'string') {
-                        animationPlayed.id = opt.id;
-                    };
-                    animationPlayed.play();
-                    ASData = Object.create((new this[1]),{
-                        target: {value: element, writable: false,},
-                        keyframeEffect: {value: kfe, writable: false,},
-                        animation: {value: animationPlayed, writable: false,},
-                    });
-                    return ASData;
-                }
-                else {
-                    //Nothing...
-                };
-            },
-        }
-        let AnimationList = {
-            0: [
-                [
-                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
-                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
-                    {kfe: {offset: 0, filter: 'opacity(0)',}, opt: {duration: 1000, delay: 1000, easing: 'ease-out', fill: 'backwards',},},
-                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
-                    {kfe: {offset: 0, filter: 'opacity(0)',}, opt: {duration: 1000, delay: 1000, easing: 'ease-out', fill: 'backwards',},},
-                    {kfe: {offset: 0, height: 0,}, opt: {duration: 2000, delay: 2000, easing: 'cubic-bezier(0.18, 0.89, 0.32, 1.48)', fill: 'backwards',},},
-                ],
-            ],
-            animate: function (seqAnimationElement,stage,opt) {
-                seqAnimationElement.filter((e,i)=>AnimationList[0][stage][i]!=undefined).forEach((e,i)=>{
-                    if (Object.keys(AnimationList[0][stage][i]).every(e=>['kfe','opt'].includes(e))) {
-                        AnimationScriptedV0_1.set(e,AnimationList[0][stage][i].kfe,AnimationList[0][stage][i].opt);
-                    }
-                });
-            },
-        };
-        AnimationList.animate(SeqAnimationList,0,{animationType: null});
-    </script>
-</body></html>
+	  <body>
+	    <div class="content">
+	        <section class="cover">
+	            <div class="logo">
+	                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="1616px" height="626px">
+	                    <path pathLength="100" style="d: path('M20,523 l82,0 a1,1,1,1,0,0,-348 l-27,0 l0,213 M482,175 l-124,0 l0,349 l211,0 M280,345 l149,0 M569,522 l0,-431 M339,91 l500,0 M1058,268 l0,149 a1,1,1,0,0,211,0 l0,-242 l130,0 a1,1,1,0,1,0,209 l-34,0 l0,139 m0,-139 c155,0,127,139,230,139 M814,180 a1,1,1,0,0,0,340 a1,1,1,0,0,0,-340z');fill: transparent;stroke: var(--letterColor);stroke-width: 41px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
+	                    <path pathLength="100" style="d: path('M338,82 c120,0,128,-62,114,-71,-9,-4,-25,10,-3,15 M694,142 M582,259 c22,-127,106,-143,115,-143,50,0,23,68,-3,28 M854,95 c0,0,139,9,200,160');fill: transparent;stroke: var(--letterColor);stroke-width: 17px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
+	                    <path pathLength="100" style="d: path('M814,202 a1,1,1,0,0,0,294 a1,1,1,0,0,0,-294');stroke: var(--letterColor);fill: transparent;stroke-linecap: round;stroke-dasharray: 0 2 0 2;stroke-width: 8px;"></path>
+	                    <path pathLength="100" style="d: path('M815,330 a1,1,1,0,0,0,37 a1,1,1,0,0,0,-37 M815,349 l25,-67 m-25,67 l56,90 M159,614 l1290,0');stroke: var(--letterColor);fill: transparent;stroke-width: 19px;stroke-linecap: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
+	                    <path pathLength="100" style="d: path('M817,14 c0,0,0,22,16,51 l0,10 l-38,0 l0,-10 c0,0,8,-13,16,-51 27,14,-60,21,0,21 l6,0 c49,0,-6,0,0,-21 M814,113 l0,34 a1,1,1,0,0,0,18 a1,1,1,0,0,0,-18');stroke: var(--letterColor);fill: var(--letterColor);stroke-width: 17px;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 0 100 0;stroke-dashoffset: 100;"></path>
+	                </svg>
+	            </div>
+	            <div class="slogan"><p>Un p'tit <span>Détour</span> ?</p></div>
+	        </section>
+	    </div>
+	    <script>
+	        let SeqAnimationList = [];
+	        Object.values(document.querySelector('svg.logo').children).forEach(e => {SeqAnimationList.push(e);});
+	        SeqAnimationList.push(document.querySelector('.slogan'));
+	        let AnimationScriptedV0_1 = {
+	            1: function AnimationScriptedV0_1() {},
+	            set: function (element,k,opt) {
+	                if (!([element,k,opt].includes(undefined)||[element,k,opt].includes(null))) {
+	                    kfe = new KeyframeEffect(element,k,opt);
+	                    animationPlayed = new Animation(kfe,document.timeline);
+	                    if (opt.hasOwnProperty('id')&&typeof opt.id == 'string') {
+	                        animationPlayed.id = opt.id;
+	                    };
+	                    animationPlayed.play();
+	                    ASData = Object.create((new this[1]),{
+	                        target: {value: element, writable: false,},
+	                        keyframeEffect: {value: kfe, writable: false,},
+	                        animation: {value: animationPlayed, writable: false,},
+	                    });
+	                    return ASData;
+	                }
+	                else {
+	                    //Nothing...
+	                };
+	            },
+	        }
+	        let AnimationList = {
+	            0: [
+	                [
+	                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
+	                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
+	                    {kfe: {offset: 0, filter: 'opacity(0)',}, opt: {duration: 1000, delay: 1000, easing: 'ease-out', fill: 'backwards',},},
+	                    {kfe: {offset: 0, strokeDashoffset: 0,}, opt: {duration: 1000, easing: 'ease-out', fill: 'backwards',},},
+	                    {kfe: {offset: 0, filter: 'opacity(0)',}, opt: {duration: 1000, delay: 1000, easing: 'ease-out', fill: 'backwards',},},
+	                    {kfe: {offset: 0, height: 0,}, opt: {duration: 2000, delay: 2000, easing: 'cubic-bezier(0.18, 0.89, 0.32, 1.48)', fill: 'backwards',},},
+	                ],
+	            ],
+	            animate: function (seqAnimationElement,stage,opt) {
+	                seqAnimationElement.filter((e,i)=>AnimationList[0][stage][i]!=undefined).forEach((e,i)=>{
+	                    if (Object.keys(AnimationList[0][stage][i]).every(e=>['kfe','opt'].includes(e))) {
+	                        AnimationScriptedV0_1.set(e,AnimationList[0][stage][i].kfe,AnimationList[0][stage][i].opt);
+	                    }
+	                });
+	            },
+	        };
+	        AnimationList.animate(SeqAnimationList,0,{animationType: null});
+	    </script>
+	</body>
+</html>
