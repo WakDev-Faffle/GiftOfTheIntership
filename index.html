@@ -16,8 +16,7 @@
                             o[1] = o[1].split(/(?:)[:|;]+/g);
                             o.pop();
                             o[1].pop();
-							return o;
-                            //Object.create(function StylesheetInterpreted() {},);
+							return Object.create(function StylesheetInterpreted() {},{selectorName: {value: o[0], writable: false,}, values: {value: o[1], writable: true,},});
                         }
                     }
                 }
