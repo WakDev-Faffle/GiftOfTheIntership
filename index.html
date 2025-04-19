@@ -10,9 +10,9 @@
                         if ([targetBalise,selector,property,value].every(e=>typeof e == 'string')) {
                             var styleElement = document.querySelector(`style${targetBalise}`),
 								txt = styleElement.textContent,
-                                regex = [new Regex(`[\w|\W|]+(?=${selector})`),new Regex('(?<=})[\w|\W]+')],
-                                styleSheet = txt.replace(regex[0],'').replace(regex[1],''),
-                                o = txt.replace(/[\w|\W|]+(?=body)/,'').replace(/(?<=})[\w|\W]+/,'').replace(/[\n|\s+]/g,'').split(/{|}/);
+                                regex = [],
+							['@Keyframes'].includes(selector)?(() => {regex.push(new Regex())})():(() => {regex.push(new Regex(`[\w|\W|]+(?=${selector})`),/(?<=})[\w|\W]+/,/[\n|\s+]/g)});
+                            var o = txt.replace(regex[0],'').replace(regex[1],'').replace(regex[2],'').split(/{|}/);
                             o.pop();
 							return o;
                             //Object.create(function StylesheetInterpreted() {},);
