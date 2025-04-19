@@ -10,7 +10,7 @@
                         if ([targetBalise,selector,property,value].every(e=>typeof e == 'string')) {
                             var styleElement = document.querySelector(`style${targetBalise}`),
 								txt = styleElement.textContent,
-                                regex = [],
+                                regex = [];
 							['@Keyframes'].includes(selector)?(() => {regex.push(new Regex())})():(() => {regex.push(new Regex(`[\w|\W|]+(?=${selector})`),/(?<=})[\w|\W]+/,/[\n|\s+]/g)});
                             var o = txt.replace(regex[0],'').replace(regex[1],'').replace(regex[2],'').split(/{|}/);
                             o.pop();
