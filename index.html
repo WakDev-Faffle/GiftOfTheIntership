@@ -14,6 +14,7 @@
                                 styleSheet = txt.replace(regex[0],'').replace(regex[1],''),
                                 o = txt.replace(/[\w|\W|]+(?=body)/,'').replace(/(?<=})[\w|\W]+/,'').replace(/[\n|\s+]/g,'').split(/{|}/);
                             o.pop();
+							return o;
                             //Object.create(function StylesheetInterpreted() {},);
                         }
                     }
@@ -111,10 +112,10 @@
 	                });
 	            },
 	        };
-		AnimationList.animate(SeqAnimationList,0,{animationType: null});
-		setTimeout(()=>{
-			svgContainer_Logo.removeAttribute('style');
-		},2000);
+			AnimationList.animate(SeqAnimationList,0,{animationType: null});
+			setTimeout(()=>{
+				svgContainer_Logo.removeAttribute('style');
+			},2000);
 	    </script>
 	</body>
 </html>
