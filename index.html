@@ -66,8 +66,9 @@
 	        </section>
 	    </div>
 	    <script>
-	        let SeqAnimationList = [];
-	        Object.values(document.querySelector('svg.logo').children).forEach(e => {SeqAnimationList.push(e);});
+	        let SeqAnimationList = [],
+		    svgContainer_Logo = document.querySelector('svg.logo');
+	        Object.values(svgContainer_Logo.children).forEach(e => {SeqAnimationList.push(e);});
 	        SeqAnimationList.push(document.querySelector('.slogan'));
 	        let AnimationScriptedV0_1 = {
 	            1: function AnimationScriptedV0_1() {},
