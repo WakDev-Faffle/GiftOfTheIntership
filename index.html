@@ -9,7 +9,7 @@
                     styleSheet: function setStyleRule(targetBalise,selector,property,value) {
                         if ([targetBalise,selector,property,value].every(e=>typeof e == 'string')) {
                             var styleElement = document.querySelector(`style${targetBalise}`),
-                                txt = styleElement.textContent,
+								txt = styleElement.textContent,
                                 regex = [new Regex(`[\w|\W|]+(?=${selector})`),new Regex('(?<=})[\w|\W]+')],
                                 styleSheet = txt.replace(regex[0],'').replace(regex[1],''),
                                 o = txt.replace(/[\w|\W|]+(?=body)/,'').replace(/(?<=})[\w|\W]+/,'').replace(/[\n|\s+]/g,'').split(/{|}/);
@@ -110,7 +110,10 @@
 	                });
 	            },
 	        };
-	        setTimeout(AnimationList.animate(SeqAnimationList,0,{animationType: null}),1000);
+		AnimationList.animate(SeqAnimationList,0,{animationType: null});
+		setTimeout(()=>{
+			svgContainer_Logo.removeAttribute('style');
+		},2000);
 	    </script>
 	</body>
 </html>
