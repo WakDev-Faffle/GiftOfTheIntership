@@ -11,7 +11,7 @@
                             var styleElement = document.querySelector(`style${targetBalise}`),
 								txt = styleElement.textContent,
                                 regex = [];
-							['@Keyframes'].includes(selector)?(() => {regex.push(new Regex())})():(() => {regex.push(new Regex(`[\w|\W|]+(?=${selector})`),/(?<=})[\w|\W]+/,/[\n|\s+]/g)})();
+							['@Keyframes'].includes(selector)?(() => {regex.push(new RegExp())})():(() => {regex.push(new RegExp(`[\w|\W|]+(?=${selector})`),/(?<=})[\w|\W]+/,/[\n|\s+]/g)})();
                             var o = txt.replace(regex[0],'').replace(regex[1],'').replace(regex[2],'').split(/{|}/);
                             o.pop();
 							return o;
