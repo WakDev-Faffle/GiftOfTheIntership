@@ -14,6 +14,7 @@
 							['@Keyframes'].includes(selector)?(() => {regex.push(new RegExp())})():(() => {regex.push(new RegExp(`[\w|\W|]+(?=${selector})`),/(?<=})[\w|\W]+/,/[\n|\s+]/g)})();
                             var o = txt.replace(regex[0],'').replace(regex[1],'').replace(regex[2],'').split(/{|}/);
                             o[1] = o[1].split(/;+/);
+							o[1] = o[1].map(e=>e.split(':'));
                             o.pop();
                             o[1].pop();
 							return Object.create(new function StylesheetInterpreted() {},{selectorName: {value: o[0], writable: false,}, values: {value: o[1], writable: true,},});
